@@ -1,0 +1,15 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  maxReplicas: 3
+  minReplicas: 3
+  scaleTargetRef:
+    apiVersion: extensions/v1
+    kind: Deployment
+    name: kubernetes-dashboard
+  targetCPUUtilizationPercentage: 80
