@@ -45,7 +45,7 @@ kubernetes-dashboard-764b4dd7-t824s         1/1     Running   0          11s
 
 ## Let's look at it via the browser
 
-Because we don't have ingress set up locally, we'll have to proxy ourselves to the api via `kubectl proxy` - this will then bind us to the api server on port `8001` (or you're chosen port)
+Because we don't have ingress set up locally, we'll have to proxy ourselves to the api via `kubectl proxy` - this will then bind us to the api server on port `8001` (or you're chosen port). This should be the same for AWS as well.
 
 ``` bash
 kubectl proxy
